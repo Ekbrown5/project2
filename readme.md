@@ -1,14 +1,16 @@
 # Seal Project 2
 
-- **Your Name:**
-- **App Name:**
-- **Description:**
+- **Eric Brown:**
+- **NBA Teams App:**
+- **Type in a team name and get a logo and City.  CLick on the team and get the starting five:**
 - **Github URL:**
 - **Deployed Website:**
 - **Trello Board:**
 
 ## List of Dependencies
-
+mongoose
+ejs
+morgan
 ##### Node Dependencies (package.json)
 
 - express
