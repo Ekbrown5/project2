@@ -25,7 +25,7 @@ Below should be a table listing the different routes in your app and their purpo
 
 | Route Name | Endpoint | Method | Description |
 |------------|----------|--------|-------------|
-| Fruit Index | /fruits | GET | Renders all fruits on a page|
+| NBA Teams  | /Starters| GET | Renders all fruits on a page|
 
 ## Design Mockups (Desktop + Mobile)
 
