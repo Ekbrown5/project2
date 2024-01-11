@@ -31,7 +31,9 @@ Below should be a table listing the different routes in your app and their purpo
 
 ##### Mobile Design
 
-![Mobile Design Mockup](./url-to-picture.jpg)
+![NBA Team mockup](https://github.com/Ekbrown5/project2/assets/148923200/e656a794-fcb0-4ae4-a9e8-16f82bac02b1)
+
+
 
 ##### Desktop Design
 
