@@ -1,10 +1,10 @@
 # Seal Project 2
 
-- **Eric Brown:**
-- **NBA Teams App:**
-- **Type in a team name and get a logo and City.  CLick on the team and get the starting five:**
-- **Github URL:**
-- **Deployed Website:**
+- **Your Name:**Eric Brown
+- **App Name:**Jersey Tracker (todo change to jersey tracker)
+- **Description:**Keep track of your favoite players and their current team 
+- **Github URL:**https://github.com/Ekbrown5/project2
+- **Deployed Website:**(todo deploy the website)
 - **Trello Board:**
 
 ## List of Dependencies
@@ -23,24 +23,39 @@ morgan
 
 Below should be a table listing the different routes in your app and their purposes.
 
-| Route Name | Endpoint | Method | Description |
+ - Index, create, delete, update, show, new, edit   
+
+| Route Name | Endpoint | Http verbs | Description |
 |------------|----------|--------|-------------|
-| NBA Teams  | /Starters| GET    |Gets every NBA teams starting five|
+| Jersey Index | / | GET | Shows the full collection of jerseys|
+| Jersey Create | / | POST | Hangs a new jersey in the closet|
+| Jersey Delete | /:id | DELETE | Sells a jersey from my collection|
+| Jersey Update | /:id | PUT | Puts the updated jersey back into the collection|
+| Jersey New | /new | GET | Displays the form to add a jersey to my collection|
+| Jersey Edit | /edit/:id | GET | Grabs the jersey to update and displays the update form|
+| Jersey Show | /:id | GET | Displays one jersey|
+
+
 
 ## Design Mockups (Desktop + Mobile)
 
 ##### Mobile Design
 
-![NBA Team mockup](https://github.com/Ekbrown5/project2/assets/148923200/e656a794-fcb0-4ae4-a9e8-16f82bac02b1)
 
+(todo add screenshots of my site in mobile responsive mode)
+Take a screenshot of the mobile site after MVP.
+![Mobile Design Mockup](./url-to-picture.jpg)
 
 
 ##### Desktop Design
 
+Take a screenshot of the desktop site after MVP.
 ![Desktop Design Mockup](./url-to-picture.jpg)
 
 ## ERD (Entity Relationship Diagram)
 
 This should be a diagram showing your models and any relationships between them.
 
-![Entity Relationship Diagram](./url-to-picture.jpg)
+
+![Entity Relationship Diagram](./Screenshot%20from%202024-01-11%2023-33-18.png)
+
