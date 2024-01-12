@@ -8,7 +8,9 @@
 - **Trello Board:**
 
 ## List of Dependencies
-
+mongoose
+ejs
+morgan
 ##### Node Dependencies (package.json)
 
 - express
@@ -34,13 +36,16 @@ Below should be a table listing the different routes in your app and their purpo
 | Jersey Show | /:id | GET | Displays one jersey|
 
 
+
 ## Design Mockups (Desktop + Mobile)
 
 ##### Mobile Design
 
+
 (todo add screenshots of my site in mobile responsive mode)
 Take a screenshot of the mobile site after MVP.
 ![Mobile Design Mockup](./url-to-picture.jpg)
+
 
 ##### Desktop Design
 
@@ -51,4 +56,6 @@ Take a screenshot of the desktop site after MVP.
 
 This should be a diagram showing your models and any relationships between them.
 
+
 ![Entity Relationship Diagram](./Screenshot%20from%202024-01-11%2023-33-18.png)
+
