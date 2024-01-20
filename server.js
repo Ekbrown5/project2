@@ -24,7 +24,7 @@ app.use("/jerseys", jerseyRouter);
 
 // routes
 app.get("/", (req, res) => {
-    res.send("It's Working")
+    res.redirect("/jerseys")
 })
 
 // Server Listener
