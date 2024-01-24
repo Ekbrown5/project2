@@ -6,15 +6,15 @@ const router = express.Router()
 router.get("/jersey/seed", (req, res) => {
 
     const startJerseys = [
-        { name: "Paul George", team: "Clippers", number: "13", },
-        { name: "Donovan Mitchell", team: "Cavaliers", number: "45"},
-        { name: "Ja Morant", team: "Grizzleys", number: "12"},
-        { name: "Jason Tatum", team: "Celtics", number: "0"},
-        { name: "Luka Doncic", team: "Mavericks", number: "77"}
+        { name: "Paul George", team: "Clippers", number: 13}, 
+        { name: "Donovan Mitchell", team: "Cavaliers", number: 45},
+        { name: "Ja Morant", team: "Grizzleys", number: 12},
+        { name: "Jason Tatum", team: "Celtics", number: 0},
+        { name: "Luka Doncic", team: "Mavericks", number: 77}
     ]
-    Animal.remove({}, (err, data) => {
+    Jersey.remove({}, (err, data) => {
     
-      Animal.create(startAnimals,(err, data) => {
+      Jersey.create(startJersey,(err, data) => {
 
           res.json(data);
         }
@@ -92,5 +92,6 @@ router.delete("/:id", async (req, res) => {
       res.redirect("/jerseys");
     }
   });
+
 
   module.exports = router;

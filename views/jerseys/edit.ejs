@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs", {title: "Jerseys new Page"}) %>
+
+  <body>
+    <h1>Jerseys new Page - views/jerseys/new.ejs</h1>
+
+    <form action="/jerseys/<%= jersey._id %>?_method=PUT" method="post">
+      <label
+        >prop1:<input type="text" name="player" value="<%= jersey.prop1 %>"
+      /></label>
+      <label
+        >prop2:<input type="text" name="prop2" value="<%= jersey.prop2 %>"
+      /></label>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

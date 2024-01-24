@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs", {title: "Jersys Show Page"}) %>
+
+  <body>
+    <h1>Jersesy Show Page - views/jersey/show.ejs</h1>
+
+    <h2>prop1: <%= jersey.prop1 %></h2>
+    <h2>prop2: <%= jersey.prop2 %></h2>
+
+    <a href="/jerseys/<%= jersey._id %>/edit"><button>Edit</button></a>
+
+    <form action="/jerseys/<%= jersey._id %>?_method=DELETE" method="post">
+      <button>delete</button>
+    </form>
+
+    <a href="/jersey"><button>Jersey Page</button></a>
+  </body>
+</html>
