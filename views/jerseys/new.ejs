@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("../partials/head.ejs", {title: "jerseys new Page"}) %>
+<%- include("../partials/head.ejs") %>
 
-  <body>
-    <h1>Jerseys new Page - views/jerseys/new.ejs</h1>
-
-    <form action="/" method="post">
-      <label>Player:<input type="text" name="Paul George" /></label>
-      <label>Team:<input type="text" name="prop2" /></label>
-      <button>Submit</button>
-    </form>
-  </body>
+<body>
+<%- include("../partials/header.ejs") %>
+<main>
+<div>
+<form action="/fruits" method="post">
+  <fieldset>
+    <legend>Create a new Jersey</legend>
+    <label>Name:<input
+      type="text"
+      name="name"
+      placeholder="name of jersey"
+      /></label>
+    <label>Team:<input
+      type="text"
+      name="team name"
+      placeholder="name of team"
+      /></label>
+    <label>Number:<input
+      type="number"
+      name="number"
+      placeholder="number on jersey"
+      /></label>
+  </fieldset>
+ <button>Submit Jersey</button>
+</form>
+</div>
+</main>
+</body>
 </html>

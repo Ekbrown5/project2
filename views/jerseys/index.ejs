@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("../partials/head.ejs", {title: "Jerseys Index Page"}) %>
+<%- include("../partials/head.ejs") %>
 
-  <body>
-    <h1>Jerseys Index Page</h1>
+<body>
+<%- include("../partials/header.ejs") %>
+<main>
+<div>
+<% for (jersey of jerseys) { %>
+<h1>Jerseys Index Page</h1>
 
-    <a href="/new"><button>CREATE NEW</button></a>
+<a href="/new"><button>CREATE NEW</button></a>
 
+<a href="/jersey"><button>jersey Page</button></a>
 
-    <a href="/jersey"><button>jersey Page</button></a>
-  </body>
+<article>
+<a href="/jerseys/<%= jerseys._id %>">
+<%= jersey.name%>
+</a>
+</article>
+
+<% } %>
+</div>
+</main>
+</body>
 </html>

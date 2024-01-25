@@ -23,7 +23,7 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-app.use("/jerseys", jerseyRouter);
+app.use("/jersey", jerseyRouter);
 
 // routes
 app.get("/", (req, res) => {

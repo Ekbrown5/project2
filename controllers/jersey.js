@@ -3,7 +3,7 @@ const Jersey = require("../models/Jersey")
 
 const router = express.Router()
 
-router.get("/jersey/seed", (req, res) => {
+router.get("/jersey/seed", async (req, res) => {
 
     const startJerseys = [
         { name: "Paul George", team: "Clippers", number: 13}, 
@@ -12,21 +12,16 @@ router.get("/jersey/seed", (req, res) => {
         { name: "Jason Tatum", team: "Celtics", number: 0},
         { name: "Luka Doncic", team: "Mavericks", number: 77}
     ]
-    Jersey.remove({}, (err, data) => {
-    
-      Jersey.create(startJersey,(err, data) => {
-
-          res.json(data);
-        }
-      );
-    });
+    await Jersey.deleteMany({});
+    await Jersey.create(startJerseys) 
+   res.redirect('/jersey') 
   });
 
 // INDEX 
 router.get("/", async (req, res) => {
     try {
       const jerseys = await Jersey.find({});
-      res.render("jerseys/index.ejs", { jerseys: jerseys });
+      res.render("jerseys/index.ejs", { jerseys});
     } catch (err) {
       console.log(err);
       res.redirect("/");
@@ -49,22 +44,13 @@ router.post("/", async (req, res) => {
     }
   });
 
-  // SHOW
-router.get("/:id", async (req, res) => {
-    try {
-      const foundjersey = await Jersey.findById(req.params.id);
-      res.render("jerseys/show.ejs", { jersey: foundjersey });
-    } catch (err) {
-      console.log(err);
-      res.redirect("/jerseys");
-    }
-  });
 
   // EDIT
 router.get("/:id/edit", async (req, res) => {
     try {
-      const foundjersey = await Jersey.findById(req.params.id);
-      res.render("jerseys/edit.ejs", { jersey: foundjersey });
+      const id = req.params.id
+      const jersey = await Jersey.findById(id);
+      res.render("jerseys/edit.ejs", { jersey});
     } catch (err) {
       console.log(err);
       res.redirect("/jerseys");
@@ -92,6 +78,19 @@ router.delete("/:id", async (req, res) => {
       res.redirect("/jerseys");
     }
   });
+
+    // SHOW
+router.get("/:id", async (req, res) => {
+  try {    
+    const id = req.params.id
+    const jersey = await Jersey.findById(id);
+    res.render("jerseys/show.ejs", { jersey});
+  } catch (err) {
+    console.log(err);
+    res.redirect("/jerseys");
+  }
+});
+
 
 
   module.exports = router;
