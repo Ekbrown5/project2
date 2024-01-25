@@ -9,12 +9,12 @@
 <% for (jersey of jerseys) { %>
 
 
-<a href="/new"><button>CREATE JERSEY</button></a>
+<a href="/jersey/new"><button>CREATE JERSEY</button></a>
 
-<a href="/show"><button>DELETE JERSEY</button></a>
+<form action="/show"><button>DELETE JERSEY</button></form>
 
 <article>
-<a href="/jerseys/<%= jerseys._id %>">
+<a href="/jersey/<%= jersey._id %>">
 <%= jersey.name%>
 <%= jersey.team%>
 <%= jersey.number%>
