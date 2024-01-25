@@ -31,6 +31,7 @@ router.get("/", async (req, res) => {
 // NEW
 router.get("/new", (req, res) => {
     res.render("jerseys/new.ejs");
+    res.redirect('/jersey/new')
   });
   
   // CREATE

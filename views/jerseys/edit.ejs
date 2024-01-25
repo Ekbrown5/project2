@@ -6,26 +6,26 @@
 <%- include("../partials/header.ejs") %>
 <main>
 <div>
-<form action="/fruits" method="post">
+<form action="/jersey" method="post">
   <fieldset>
-    <legend>Edit <%= fruit.name %></legend>
+    <legend>Edit <%= jersey.name %></legend>
     <label>Name:<input
       type="text"
       name="name"
       placeholder="name of jersey"
-      value="<%= fruit.name %>"
+      value="<%= jersey.name %>"
       /></label>
     <label>Team:<input
       type="text"
       name="team name"
       placeholder="name of team"
-      value="<%= fruit.team %>"
+      value="<%= jersey.team %>"
       /></label>
     <label>Number:<input
       type="number"
       name="number"
       placeholder="number on jersey"
-      value="<%= fruit.number %>"
+      value="<%= jersey.number %>"
       /></label>
   </fieldset>
  <button>Submit Jersey</button>

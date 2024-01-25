@@ -27,7 +27,7 @@ app.use("/jersey", jerseyRouter);
 
 // routes
 app.get("/", (req, res) => {
-    res.redirect("/jerseys")
+    res.redirect("/jersey")
 })
  
 app.post("/", (req, res) => {
