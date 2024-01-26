@@ -3,11 +3,12 @@
   <%- include("../partials/head.ejs", {title: "Samples new Page"}) %>
 
   <body>
-    <h1>Jerseys new Page - views/jerseys/new.ejs</h1>
+    <h1>Create Jersey</h1>
 
     <form action="/new" method="post">
-      <label>prop1:<input type="text" name="prop1" /></label>
-      <label>prop2:<input type="text" name="prop2" /></label>
+      <label>Name:<input type="text" name="prop1" /></label>
+      <label>Team:<input type="text" name="prop2" /></label>
+      <label>Number:<input type="text" name="prop3" /></label>
       <button>Submit</button>
     </form>
   </body>

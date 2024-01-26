@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs") %>
+
 
 <body>
-<%- include("../partials/header.ejs") %>
+
 <main>
 <div>
 <h2><%= jersey.name %></h2>
 <h3><%= jersey.team %></h3>
+<h3><%= jersey.number %></h3>
 <a href="/jerseys/<%= jersey._id %>/edit"><button>Edit</button></a>
 <form action="/jerseys/<%= jersey._id %>?_method=DELETE" Method="POST">
   <button>Delete</button>
 </form>
-<a href="/jerseys"><button>Back to Main</button></a>
+<a href="/jerseys/"><button>Back to Main</button></a>
 </div>
 </main>
 </body>
