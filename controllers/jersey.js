@@ -17,7 +17,7 @@ router.get("/jersey/seed", async (req, res) => {
    res.redirect('/jersey') 
   });
 
-// INDEX
+// INDEX 
 router.get("/", async (req, res) => {
     try {
       const jerseys = await Jersey.find({});
@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
 // NEW
 router.get("/new", (req, res) => {
     res.render("jerseys/new.ejs");
-    res.redirect('/jersey/new')
+    res.redirect("/jerseys")
   });
   
   // CREATE
@@ -41,9 +41,10 @@ router.post("/", async (req, res) => {
       res.redirect("/jerseys");
     } catch (err) {
       console.log(err);
-      res.render("jerseys/new.ejs");
+      res.render("/jerseys/new.ejs");
     }
   });
+
 
   // EDIT
 router.get("/:id/edit", async (req, res) => {

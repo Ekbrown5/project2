@@ -1,5 +1,5 @@
 const mongoose = require("./connection")
-const jersey = require("./jerey")// Delay Seed Code Till Connection Opens with Connection Event
+const jersey = require("./jeresy")// Delay Seed Code Till Connection Opens with Connection Event
 mongoose.connection.on("open", async () => {
   // seed code should be inside this function
 

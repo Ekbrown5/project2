@@ -11,13 +11,18 @@
 
 <a href="/jersey/new"><button>CREATE JERSEY</button></a>
 
-<form action="/show"><button>DELETE JERSEY</button></form>
+<form action="/jersey"><button>DELETE JERSEY</button></form>
 
 <article>
 <a href="/jersey/<%= jersey._id %>">
 <%= jersey.name%>
 <%= jersey.team%>
 <%= jersey.number%>
+<style>
+    div {
+text-align: center;
+    }
+</style>
 </a>
 </article>
 
