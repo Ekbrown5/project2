@@ -1,5 +1,5 @@
 const mongoose = require("./connection")
-const jersey = require("./jeresy")// Delay Seed Code Till Connection Opens with Connection Event
+const Jersey = require("./Jeresy")// Delay Seed Code Till Connection Opens with Connection Event
 mongoose.connection.on("open", async () => {
   // seed code should be inside this function
 
@@ -7,7 +7,7 @@ mongoose.connection.on("open", async () => {
   await Jersey.deleteMany({});
 
   // add seed data
-  const jerseys = await Jersey.create([
+  const Jerseys = await Jersey.create([
     { name: "Paul George", team: "Clippers", number: "13" },
     { name: "Donovan Mitchell", team: "Cavaliers", number:"45" },
     { name: "Ja Morant", team: "Grizzleys", number: "12" },
@@ -16,5 +16,5 @@ mongoose.connection.on("open", async () => {
   ]);
 
   // log to confirm it was created
-  console.log(jerseys);
+  console.log(Jerseys);
 });  

@@ -10,7 +10,7 @@ text-align: center;
   }
 </style>
 <a href="/jersey/new"><button>Edit</button></a>
-<form action="/jersey/:id?_method=DELETE" Method="POST">
+<form action="/jerseys/<%= jersey._id %>?_method=DELETE" method="POST">
   <button>Delete</button>
 </form>
 <a href="/jersey"><button>Back to Main</button></a>

@@ -4,13 +4,17 @@
 
   <body>
     <h1>Create Jersey</h1>
-    <a href="/jersey/new"></a>
-
-    <form action="/jersey/<%= jersey._id %>" method="post">
-      <label>Name:<input type="text" name="prop1" /></label>
-      <label>Team:<input type="text" name="prop2" /></label>
-      <label>Number:<input type="text" name="prop3" /></label>
-      <button>Submit</button>
+  
+    <!-- Add a success message -->
+    <% if (locals.successMessage) { %>
+      <p class="success-message"><%= locals.successMessage %></p>
+    <% } %>
+  
+    <form action="/jersey" method="post">
+      <label>Name: <input type="text" name="name" /></label>
+      <label>Team: <input type="text" name="team" /></label>
+      <label>Number: <input type="text" name="number" /></label>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>

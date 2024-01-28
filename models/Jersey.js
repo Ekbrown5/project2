@@ -1,13 +1,11 @@
-const mongoose = require("./connection")
-const {Schema, model} = require("./connection")
+const mongoose = require("./connection");
 
-console.log(mongoose)
-
-
-const jerseySchema = new Schema({
+const jerseySchema = new mongoose.Schema({
     name: String,
     team: String,
-    number: Number
-})
-const Jersey = mongoose.model("Jersey", jerseySchema)
-module.exports = Jersey
+    number: Number,
+});
+
+const Jersey = mongoose.model("Jersey", jerseySchema);
+
+module.exports = Jersey;

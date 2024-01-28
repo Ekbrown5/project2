@@ -5,11 +5,11 @@
   <body>
     <h1>Create Jersey</h1>
 
-    <form action="/new" method="post">
+    <form action="/main?name=<%= prop1 %>&team=<%= prop2 %>&number=<%= prop3 %>" method="GET">
       <label>Name:<input type="text" name="prop1" /></label>
       <label>Team:<input type="text" name="prop2" /></label>
       <label>Number:<input type="text" name="prop3" /></label>
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>

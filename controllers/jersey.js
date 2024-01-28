@@ -30,21 +30,21 @@ router.get("/", async (req, res) => {
 
 // NEW
 router.get("/new", (req, res) => {
-    res.render("jerseys/new.ejs");
-    res.redirect("/jerseys")
-  });
-  
-  // CREATE
-router.post("/", async (req, res) => {
-    try {
-      await Jersey.create(req.body);
-      res.redirect("/jerseys");
-    } catch (err) {
-      console.log(err);
-      res.render("/jerseys/new.ejs");
-    }
-  });
+  res.render("jerseys/new.ejs");
+});
 
+// Create
+router.post("/jersey", async (req, res) => {
+  try {
+    const newJersey = await Jersey.create(req.body);
+    console.log("New Jersey created:", newJersey);
+    res.locals.successMessage = "Jersey created successfully!";
+    res.redirect("/jersey"); // Redirect to the index page after creating a jersey
+  } catch (err) {
+    console.error(err);
+    res.render("jerseys/new.ejs");
+  }
+});
 
   // EDIT
 router.get("/:id/edit", async (req, res) => {
@@ -62,7 +62,7 @@ router.get("/:id/edit", async (req, res) => {
 router.put("/:id", async (req, res) => {
     try {
       await Jersey.findByIdAndUpdate(req.params.id, req.body);
-      res.redirect("/jerseys" + req.params.id);
+      res.redirect("/jerseys/" + req.params.id);
     } catch (err) {
       console.log(err);
       res.redirect("/jersys");
